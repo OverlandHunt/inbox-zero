@@ -82,6 +82,9 @@ services:
       UPSTASH_REDIS_URL: ${UPSTASH_REDIS_URL:-http://serverless-redis-http:80}
       INTERNAL_API_URL: ${INTERNAL_API_URL:-http://web:3000}
     restart: always
+    labels:
+      - "proxy.aliases=inbox-zero"
+
 
   worker:
     image: ghcr.io/elie222/inbox-zero:latest
