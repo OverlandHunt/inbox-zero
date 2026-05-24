@@ -68,8 +68,8 @@ services:
       redis:
         condition: service_started
         required: false
-    ports:
-      - ${WEB_PORT:-3000}:3000
+#    ports:
+#      - ${WEB_PORT:-3000}:3000
     networks:
       - inbox-zero-network
     environment:
